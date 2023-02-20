@@ -1,5 +1,10 @@
 Math.roundTo = function (number, precision) {
-    // TODO: Program Me
+    let myNum = number.toFixed(precision);// reduce to fixed point
+    if(myNum % 1 === 0){ // check if whole number
+        return Math.floor(myNum);
+    } else {
+        return parseFloat(myNum);
+    }
 }
 
 console.log(Math.roundTo(3.1415926535, 4)); // 3.1416
